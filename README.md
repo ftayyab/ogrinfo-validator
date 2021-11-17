@@ -5,7 +5,7 @@ ogrinfo-validator wraps the `ogrinfo` GDAL tool to retrieve information about pr
 
 1. [Install GDAL tools][1] (includes the `ogr2ogr` command line tool)
 
-2. Install package:
+2. Installing package:
 
 ```sh
 npm install ogrinfo-validator
