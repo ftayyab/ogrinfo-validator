@@ -1,0 +1,20 @@
+{
+  "name": "ogrinfo-validator",
+  "version": "1.0.2",
+  "description": "A Wrapper around ogrinfo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ogr",
+    "ogrinfo",
+    "wrapper"
+  ],
+  "author": "FT",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ftayyab/ogrinfo-validator.git"
+  }
+}
