@@ -1,5 +1,7 @@
 
-ogrinfo-validator wraps the `ogrinfo` GDAL tool to retrieve information about provided vector datasets. This package also allows the user to validate their vector data source against set criteria.
+ogrinfo-validator wraps the `ogrinfo` GDAL tool to retrieve information about provided vector datasets. This package also allows the user to validate their vector data source against set criteria. Validation includes:
+- Ability to determine if number of features is beyond specified limit
+- If extent of the Vector Dataset is Incorrect
 
 ## Installation
 
@@ -13,7 +15,7 @@ npm install ogrinfo-validator
 
 ## Usage
 
-ogrinfo takes either a file path. The result will include general & validation information.
+ogrinfo takes a file path. The result will include general & validation information.
 
 ```javascript
 // Using CommonJS modules
@@ -28,9 +30,13 @@ ogrinfov('test.shp', {options: ['summaryOnly','listAll']});
 // Call with options & Limits
 ogrinfov('test.shp', {options: ['summaryOnly','listAll']}, {limits:{ featureCount: 10000, checkExtent: true }})
 
+## IMPORTANT
+- Input file (*.shp) must have related *.shx file and optional *.prj file.
+
+
 ## VERSION
 
--  1.0.1
+-  1.0.3
 
 ## API
 
@@ -52,4 +58,5 @@ The following **`limits`** are available for validation purposes (none required)
 
 The **`output`** object has the following properties:
 
-- `object` - Javascript object that contains metadata and validation Information
+- `object` - Javascript object that contains metadata and validation Information. Error information is return in error key.
+- 'Rejection Promise' - on Error
