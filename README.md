@@ -59,4 +59,4 @@ The following **`limits`** are available for validation purposes (none required)
 The **`output`** object has the following properties:
 
 - `object` - Javascript object that contains metadata and validation Information. Error information is return in error key.
-- 'Rejection Promise' - on Error
+- 'Rejection Promise' - on Error of process
