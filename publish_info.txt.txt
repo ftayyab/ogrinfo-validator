@@ -1,0 +1,8 @@
+git status
+git add . 
+git commit -m 'Info'
+git push
+
+npm login
+npm version patch
+npm publish

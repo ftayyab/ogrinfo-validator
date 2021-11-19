@@ -22,13 +22,18 @@ ogrinfo takes a file path. The result will include general & validation informat
 const ogrinfov = require('ogrinfo-validator')
 
 // Simple Call
-ogrinfov('test.shp');
-
-// Call with options
-ogrinfov('test.shp', {options: ['summaryOnly','listAll']});
+ogrinfov('test.shp').then((result)=>{
+    // Do what you need
+}).catch((err)=>{
+    // Show or handle error
+})
 
 // Call with options & Limits
-ogrinfov('test.shp', {options: ['summaryOnly','listAll']}, {limits:{ featureCount: 10000, checkExtent: true }})
+ogrinfov(extracted_folder, {options: ['summaryOnly','listAll']}, {limits:{ featureCount: 500000, checkExtent: true }}).then((result)=>{
+    console.log(result);
+}).catch((err)=>{
+    console.log(err);
+});
 
 ## IMPORTANT
 - Input file (*.shp) must have related *.shx file and optional *.prj file.
@@ -58,5 +63,5 @@ The following **`limits`** are available for validation purposes (none required)
 
 The **`output`** object has the following properties:
 
-- `object` - Javascript object that contains metadata and validation Information. Error information is return in error key.
+- `promise` - Javascript object that contains metadata and validation Information. Error information is return in error key.
 - 'Rejection Promise' - on Error of process
