@@ -41,7 +41,7 @@ ogrinfov(extracted_folder, {options: ['summaryOnly','listAll']}, {limits:{ featu
 
 ## VERSION
 
--  1.0.3
+-  1.0.4
 
 ## API
 
