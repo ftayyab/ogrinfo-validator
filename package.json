@@ -16,5 +16,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ftayyab/ogrinfo-validator.git"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.9",
+    "fast-csv": "^4.3.6"
   }
 }
