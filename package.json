@@ -1,6 +1,6 @@
 {
   "name": "ogrinfo-validator",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A Wrapper around ogrinfo",
   "main": "app.js",
   "scripts": {

@@ -41,7 +41,7 @@ ogrinfov('<file location>', {options: ['summaryOnly','listAll']}, {limits:{ feat
 
 ## VERSION
 
--  1.0.6
+-  1.0.8
 
 ## API
 
